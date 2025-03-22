@@ -14,9 +14,10 @@ Este repositório contém o backend da aplicação **Taskstream**.
 ## 📂 Estrutura do Projeto
 ```
 /backend
-├── src/              # Código-fonte do backend
+├── Api/              # Camada de api
+├── Core/              # Camada de core (domain, models e dtos)
+├── Data/              # Camada de data (Comunicação com a base de dados)
 ├── tests/            # Testes unitários
-├── docker-compose.yml # Configuração Docker
 ├── README.md         # Documentação do projeto
 ```
 
