@@ -1,0 +1,59 @@
+# .gitignore para backend em .NET e frontend em Angular
+
+### .NET ###
+# Build e artefatos
+bin/
+obj/
+
+# Configuração do usuário
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs e debug
+*.log
+
+# Arquivos temporários e cache
+*.vs/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Configurações do Rider/Resharper
+.idea/
+*.sln.iml
+
+# Dependências
+**/node_modules/
+**/package-lock.json
+
+# Configurações do Docker
+.dockerignore
+Dockerfile
+
+### Angular ###
+# Diretório de build e cache
+/dist/
+/out-tsc/
+/.angular/
+
+# Dependências
+/node_modules/
+
+# Configurações do ambiente (personalizadas)
+/src/environments/environment*.ts
+
+# Logs e relatórios
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configurações do Editor
+/.vscode/
+/.idea/
+
+# Outros arquivos desnecessários
+*.bak
+*.swp
+*.swo
