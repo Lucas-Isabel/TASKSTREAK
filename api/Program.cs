@@ -1,13 +1,19 @@
-var builder = WebApplication.CreateBuilder(args);
+using Core.Interfaces;
+using Data.MemoryRepositories;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+var useMemoryRepository = builder.Configuration.GetValue<bool>("UseMemoryRepository");
+if (useMemoryRepository)
+    builder.Services.AddSingleton<IUserRepository, UserMemoryRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
